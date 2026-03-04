@@ -1,5 +1,7 @@
 # Lid Accordion
 
+[English](README.en.md)
+
 用 MacBook 的開蓋角度當作風箱，把 MacBook 變成一台虛擬手風琴的 Side Project。
 
 利用上班空閒時間，透過 ChatGPT 協助逐步實作完成。
