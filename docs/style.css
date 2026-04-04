@@ -151,26 +151,20 @@ a:hover { color: var(--accent-hover); }
 }
 
 /* === Demo === */
-.demo-placeholder {
-  max-width: 640px;
+.demo-video {
+  max-width: 360px;
+  max-height: 640px;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  background: var(--bg-card);
-  border: 1px dashed var(--border);
+  aspect-ratio: 9 / 16;
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  background: #000;
 }
 
-.demo-coming-soon {
-  text-align: center;
-  color: var(--text-dim);
-}
-.demo-coming-soon span {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 8px;
+.demo-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* === Download === */
