@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lid Accordion — Turn Your MacBook into an Accordion</title>
+  <meta name="description" content="Turn your MacBook into a virtual accordion! Uses the lid angle sensor as bellows, keyboard as keys, with real-time audio synthesis.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-icon">🪗</div>
+      <h1>Lid Accordion</h1>
+      <p class="tagline">Turn Your MacBook into an Accordion</p>
+      <p class="subtitle">Uses the lid angle sensor as bellows, keyboard as keys, with real-time polyphonic audio synthesis</p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">Download</a>
+        <a href="https://github.com/MacacaGames/MacbookAccordion" class="btn btn-secondary">GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📐</div>
+          <h3>Lid Angle Sensor</h3>
+          <p>Reads the MacBook lid opening angle and converts it into bellows push/pull force — the wider you move, the louder it gets</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎵</div>
+          <h3>Real-Time Synthesis</h3>
+          <p>PolyAccordionSynth engine with dual detuned sawtooth waves and soft-clipping, outputting at 44.1 kHz in real time</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎹</div>
+          <h3>Keyboard Mapping</h3>
+          <p>Two-octave keyboard layout mimicking piano black and white keys, with octave transposition support</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎛️</div>
+          <h3>Live Tweak Panel</h3>
+          <p>GUI sliders for real-time adjustment of bellows sensitivity, reed thickness, air noise, and 11 parameters total</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <h2>Demo</h2>
+      <div class="demo-placeholder">
+        <!-- Replace with YouTube iframe later -->
+        <div class="demo-coming-soon">
+          <span>🎬</span>
+          <p>Demo video coming soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="download" id="download">
+    <div class="container">
+      <h2>Download &amp; Install</h2>
+      <div class="install-steps">
+        <div class="install-card install-card-highlight">
+          <h3>Pre-Built App (Recommended)</h3>
+          <p class="install-desc">Download the ready-to-run macOS app. No Python or dependencies needed.</p>
+          <a href="https://github.com/MacacaGames/MacbookAccordion/releases/latest" class="btn btn-primary btn-download">Download LidAccordion.app</a>
+          <p class="install-hint">Requires macOS. Check <a href="https://github.com/MacacaGames/MacbookAccordion/releases">Releases</a> for all versions.</p>
+        </div>
+        <div class="install-card">
+          <h3>Run from Source</h3>
+          <pre><code>pip install pygame numpy sounddevice pybooklid
+python lid_accordion.py</code></pre>
+        </div>
+        <div class="install-card">
+          <h3>Build .app Yourself</h3>
+          <pre><code>chmod +x build_mac_app.sh
+./build_mac_app.sh
+
+# Run it
+./dist/LidAccordion.app/Contents/MacOS/LidAccordion</code></pre>
+        </div>
+      </div>
+      <p class="note">Requires macOS + Python 3 (for source/build). Falls back to simulation mode (arrow keys) when the lid angle sensor is unavailable.</p>
+    </div>
+  </section>
+
+  <!-- Keyboard Map -->
+  <section class="keymap" id="keymap">
+    <div class="container">
+      <h2>Key Bindings</h2>
+      <div class="keymap-groups">
+        <div class="keymap-group">
+          <h3>Mid Range (MIDI 60–78)</h3>
+          <p><strong>White keys:</strong> <kbd>Q</kbd> <kbd>W</kbd> <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>U</kbd> <kbd>I</kbd> <kbd>O</kbd> <kbd>P</kbd></p>
+          <p><strong>Black keys:</strong> <kbd>1</kbd> <kbd>2</kbd> <kbd>4</kbd> <kbd>5</kbd> <kbd>6</kbd> <kbd>8</kbd> <kbd>9</kbd> <kbd>0</kbd></p>
+        </div>
+        <div class="keymap-group">
+          <h3>High Range (MIDI 72–94)</h3>
+          <p><strong>White keys:</strong> <kbd>Z</kbd> <kbd>X</kbd> <kbd>C</kbd> <kbd>V</kbd> <kbd>B</kbd> <kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd> <kbd>/</kbd></p>
+          <p><strong>Black keys:</strong> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> <kbd>G</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> <kbd>;</kbd></p>
+        </div>
+      </div>
+      <p class="note">Release Shift = octave up | Release Ctrl = octave down | Tab = reset to default</p>
+    </div>
+  </section>
+
+  <!-- Support / Donate -->
+  <section class="support" id="support">
+    <div class="container">
+      <h2>Support This Project</h2>
+      <p class="support-desc">If you enjoy this project, consider buying me a coffee or donating via crypto!</p>
+
+      <div class="support-grid">
+        <!-- Ko-fi -->
+        <div class="support-card">
+          <h3>☕ Ko-fi</h3>
+          <div id="kofi-widget"></div>
+          <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+          <script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#ff8c30', 'X8X71X8H18');kofiwidget2.draw();</script>
+        </div>
+
+        <!-- ETH Donate -->
+        <div class="support-card">
+          <h3>⟠ Ethereum Donation</h3>
+          <div class="eth-address-wrap">
+            <code class="eth-address" id="eth-addr">0xF821eaE8df237022F17235C36eb22D8426b989A4</code>
+            <button class="copy-btn" onclick="copyETH()" title="Copy address">📋</button>
+          </div>
+          <p class="copy-feedback" id="copy-feedback"></p>
+          <canvas id="eth-qr" width="160" height="160"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/MacacaGames/MacbookAccordion">GitHub</a>
+        ·
+        <a href="README.md">繁體中文</a>
+        ·
+        <a href="README.en.md">English</a>
+        ·
+        MIT License
+      </p>
+      <p class="footer-sub">Lid Accordion v0.0.1 — games.macaca.lidaccordion</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- Copy ETH address ---
+    function copyETH() {
+      const addr = document.getElementById('eth-addr').textContent;
+      navigator.clipboard.writeText(addr).then(() => {
+        const fb = document.getElementById('copy-feedback');
+        fb.textContent = 'Copied!';
+        setTimeout(() => { fb.textContent = ''; }, 2000);
+      });
+    }
+
+    // --- QR Code generation ---
+    (function() {
+      const addr = document.getElementById('eth-addr').textContent;
+      if (addr.startsWith('0xYOUR')) return;
+      // QR will be generated after library loads
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script>
+    (function() {
+      const addr = document.getElementById('eth-addr').textContent;
+      if (typeof qrcode === 'undefined' || addr.startsWith('0xYOUR')) return;
+      const qr = qrcode(0, 'M');
+      qr.addData('ethereum:' + addr);
+      qr.make();
+      const canvas = document.getElementById('eth-qr');
+      const ctx = canvas.getContext('2d');
+      const size = 160;
+      const modules = qr.getModuleCount();
+      const cellSize = size / modules;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, size, size);
+      ctx.fillStyle = '#000000';
+      for (let r = 0; r < modules; r++) {
+        for (let c = 0; c < modules; c++) {
+          if (qr.isDark(r, c)) {
+            ctx.fillRect(c * cellSize, r * cellSize, cellSize + 0.5, cellSize + 0.5);
+          }
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
