@@ -46,10 +46,10 @@
   }
   </script>
 
-  <!-- Fonts: Righteous (display) + Poppins (body) -->
+  <!-- Fonts: Share Tech Mono (HUD) + Fira Code (code) + Space Grotesk (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -71,20 +71,22 @@
 
   <!-- Hero -->
   <header class="hero" id="top">
+    <div class="scanlines"></div>
     <div class="hero-glow"></div>
     <div class="container">
-      <div class="hero-icon">🪗</div>
-      <h1>Lid Accordion</h1>
-      <p class="tagline">Turn Your MacBook into an Accordion</p>
-      <p class="subtitle">Uses the lid angle sensor as bellows, keyboard as keys, with real-time polyphonic audio synthesis</p>
+      <div class="terminal-line"><span class="prompt">$</span> lid_accordion <span class="flag">--start</span></div>
+      <h1><span class="blink">&gt;</span> Lid Accordion</h1>
+      <p class="tagline">// Turn Your MacBook into an Accordion</p>
+      <p class="subtitle">Lid angle sensor as bellows. Keyboard as keys. Real-time polyphonic synthesis at 44.1 kHz.</p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">Download Free</a>
-        <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+        <a href="#download" class="btn btn-primary">./download.sh</a>
+        <a href="#demo" class="btn btn-secondary">cat demo.mp4</a>
       </div>
       <div class="hero-badges">
-        <span class="badge">Open Source</span>
+        <span class="badge">MIT</span>
         <span class="badge">macOS</span>
-        <span class="badge">MIT License</span>
+        <span class="badge">Python 3</span>
+        <span class="badge">v0.0.1</span>
       </div>
     </div>
   </header>
@@ -218,7 +220,7 @@ python lid_accordion.py</code></pre>
         ·
         MIT License
       </p>
-      <p class="footer-sub">Lid Accordion v0.0.1 — games.macaca.lidaccordion</p>
+      <p class="footer-sub">&copy; 2026 Macaca Games Inc.</p>
     </div>
   </footer>
 
