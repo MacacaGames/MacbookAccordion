@@ -11,7 +11,7 @@
   <meta name="author" content="MacacaGames">
   <link rel="canonical" href="https://lidaccordion.macaca.games/">
 
-  <!-- Open Graph (Facebook / LINE / Discord / etc.) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lid Accordion — Turn Your MacBook into an Accordion">
   <meta property="og:description" content="Turn your MacBook into a virtual accordion! Uses the lid angle sensor as bellows, keyboard as keys, with real-time audio synthesis.">
@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="Turn your MacBook into a virtual accordion! Uses the lid angle sensor as bellows, keyboard as keys, with real-time audio synthesis.">
   <meta name="twitter:image" content="https://lidaccordion.macaca.games/assets/og-image.png">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,20 +46,45 @@
   }
   </script>
 
+  <!-- Fonts: Righteous (display) + Poppins (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Sticky Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">🪗 Lid Accordion</a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#download">Download</a>
+        <a href="#support">Support</a>
+        <a href="https://github.com/MacacaGames/MacbookAccordion" class="nav-gh">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero" id="top">
+    <div class="hero-glow"></div>
     <div class="container">
       <div class="hero-icon">🪗</div>
       <h1>Lid Accordion</h1>
       <p class="tagline">Turn Your MacBook into an Accordion</p>
       <p class="subtitle">Uses the lid angle sensor as bellows, keyboard as keys, with real-time polyphonic audio synthesis</p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">Download</a>
-        <a href="https://github.com/MacacaGames/MacbookAccordion" class="btn btn-secondary">GitHub Repo</a>
+        <a href="#download" class="btn btn-primary">Download Free</a>
+        <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">Open Source</span>
+        <span class="badge">macOS</span>
+        <span class="badge">MIT License</span>
       </div>
     </div>
   </header>
@@ -68,23 +93,24 @@
   <section class="features" id="features">
     <div class="container">
       <h2>Features</h2>
+      <p class="section-desc">Everything you need to play accordion on your MacBook</p>
       <div class="feature-grid">
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">📐</div>
           <h3>Lid Angle Sensor</h3>
           <p>Reads the MacBook lid opening angle and converts it into bellows push/pull force — the wider you move, the louder it gets</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">🎵</div>
           <h3>Real-Time Synthesis</h3>
           <p>PolyAccordionSynth engine with dual detuned sawtooth waves and soft-clipping, outputting at 44.1 kHz in real time</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">🎹</div>
           <h3>Keyboard Mapping</h3>
           <p>Two-octave keyboard layout mimicking piano black and white keys, with octave transposition support</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">🎛️</div>
           <h3>Live Tweak Panel</h3>
           <p>GUI sliders for real-time adjustment of bellows sensitivity, reed thickness, air noise, and 11 parameters total</p>
@@ -96,9 +122,10 @@
   <!-- Demo -->
   <section class="demo" id="demo">
     <div class="container">
-      <h2>Demo</h2>
+      <h2>See It in Action</h2>
+      <p class="section-desc">Watch how the MacBook lid becomes your bellows</p>
       <div class="demo-video">
-        <iframe src="https://www.youtube.com/embed/Ar1lbyOmlVo" title="Lid Accordion Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Ar1lbyOmlVo" title="Lid Accordion Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -107,19 +134,21 @@
   <section class="download" id="download">
     <div class="container">
       <h2>Download &amp; Install</h2>
+      <p class="section-desc">Get started in seconds</p>
       <div class="install-steps">
-        <div class="install-card install-card-highlight">
-          <h3>Pre-Built App (Recommended)</h3>
+        <div class="install-card install-card-highlight fade-in">
+          <div class="install-badge">Recommended</div>
+          <h3>Pre-Built App</h3>
           <p class="install-desc">Download the ready-to-run macOS app. No Python or dependencies needed.</p>
           <a href="https://github.com/MacacaGames/MacbookAccordion/releases/latest" class="btn btn-primary btn-download">Download LidAccordion.app</a>
           <p class="install-hint">Requires macOS. Check <a href="https://github.com/MacacaGames/MacbookAccordion/releases">Releases</a> for all versions.</p>
         </div>
-        <div class="install-card">
+        <div class="install-card fade-in">
           <h3>Run from Source</h3>
           <pre><code>pip install pygame numpy sounddevice pybooklid
 python lid_accordion.py</code></pre>
         </div>
-        <div class="install-card">
+        <div class="install-card fade-in">
           <h3>Build .app Yourself</h3>
           <pre><code>chmod +x build_mac_app.sh
 ./build_mac_app.sh
@@ -157,18 +186,14 @@ python lid_accordion.py</code></pre>
     <div class="container">
       <h2>Support This Project</h2>
       <p class="support-desc">If you enjoy this project, consider buying me a coffee or donating via crypto!</p>
-
       <div class="support-grid">
-        <!-- Ko-fi -->
-        <div class="support-card">
+        <div class="support-card fade-in">
           <h3>☕ Ko-fi</h3>
           <div id="kofi-widget"></div>
           <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
           <script type="text/javascript">kofiwidget2.init('Support me on Ko-fi', '#ff8c30', 'X8X71X8H18');kofiwidget2.draw();</script>
         </div>
-
-        <!-- ETH Donate -->
-        <div class="support-card">
+        <div class="support-card fade-in">
           <h3>⟠ Ethereum Donation</h3>
           <div class="eth-address-wrap">
             <code class="eth-address" id="eth-addr">0xF821eaE8df237022F17235C36eb22D8426b989A4</code>
@@ -198,6 +223,31 @@ python lid_accordion.py</code></pre>
   </footer>
 
   <script>
+    // --- Sticky nav ---
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 60);
+    });
+
+    // --- Active nav link ---
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // --- Scroll fade-in ---
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
     // --- Copy ETH address ---
     function copyETH() {
       const addr = document.getElementById('eth-addr').textContent;
@@ -207,13 +257,6 @@ python lid_accordion.py</code></pre>
         setTimeout(() => { fb.textContent = ''; }, 2000);
       });
     }
-
-    // --- QR Code generation ---
-    (function() {
-      const addr = document.getElementById('eth-addr').textContent;
-      if (addr.startsWith('0xYOUR')) return;
-      // QR will be generated after library loads
-    })();
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
